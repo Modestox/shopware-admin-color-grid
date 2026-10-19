@@ -3,7 +3,7 @@
  *
  * @copyright Copyright (c) 2026 Sergey Kuzmitsky
  * @license   MIT
- * @link      https://github.com/Modestox/modestox
+ * @link      https://github.com/Modestox/shopware-admin-color-grid
  */
 
 import template from './modestox-color-grid-index.html.twig';

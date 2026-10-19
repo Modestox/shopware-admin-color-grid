@@ -4,7 +4,7 @@
  *
  * @copyright Copyright (c) 2026 Sergey Kuzmitsky
  * @license   MIT
- * @link      https://github.com/Modestox/modestox
+ * @link      https://github.com/Modestox/shopware-admin-color-grid
  */
 
 declare(strict_types=1);
@@ -31,6 +31,7 @@ class ModestoxAdminColorGrid extends Plugin
             return;
         }
 
-        $connection = $this->container->get(Connection::class);$connection->executeStatement('DROP TABLE IF EXISTS `modestox_admin_color_grid`');
+        $connection = $this->container->get(Connection::class);
+        $connection->executeStatement('DROP TABLE IF EXISTS `modestox_admin_color_grid`');
     }
 }
