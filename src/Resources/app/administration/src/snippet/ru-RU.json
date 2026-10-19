@@ -1,0 +1,21 @@
+{
+  "modestox-color-grid": {
+    "list": {
+      "columnStatus": "Статус",
+      "columnColor": "Цвет",
+      "columnActive": "Активно"
+    },
+    "notification": {
+      "loadError": "Ошибка загрузки правил.",
+      "selectStatusError": "Пожалуйста, выберите статус.",
+      "saveSuccess": "Правило успешно сохранено.",
+      "saveError": "Ошибка сохранения правила.",
+      "deleteSuccess": "Правило успешно удалено.",
+      "deleteError": "Ошибка удаления правила."
+    },
+    "validation": {
+      "invalidHexColor": "Цвет должен быть в формате HEX (например, #FF0000 или #F00).",
+      "duplicateStatus": "Правило для этого статуса уже существует!"
+    }
+  }
+}

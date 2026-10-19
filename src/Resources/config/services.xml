@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Modestox - Shopware Admin Color Grid
+ *
+ * @copyright Copyright (c) 2026 Sergey Kuzmitsky
+ * @license   MIT
+ * @link      https://github.com/Modestox/modestox
+ */
+-->
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <!-- Entity Definition -->
+        <service id="Modestox\AdminColorGrid\Core\Content\ColorGrid\ColorGridDefinition">
+            <tag name="shopware.entity.definition" entity="modestox_admin_color_grid" />
+        </service>
+
+        <!-- Color Grid Validation -->
+        <service id="Modestox\AdminColorGrid\Subscriber\ColorGridValidationSubscriber">
+            <argument type="service" id="Doctrine\DBAL\Connection"/>
+            <tag name="kernel.event_subscriber"/>
+        </service>
+    </services>
+</container>

@@ -1,0 +1,42 @@
+{
+  "sw-settings": {
+    "index": {
+      "tabModestox": "Modestox"
+    }
+  },
+  "modestox-color-grid": {
+    "general": {
+      "title": "Admin Color Grid",
+      "description": "Управление правилами подсветки строк таблиц в админке"
+    },
+    "button": {
+      "addRule": "Добавить правило",
+      "edit": "Редактировать",
+      "delete": "Удалить",
+      "cancel": "Отмена",
+      "save": "Сохранить"
+    },
+    "list": {
+      "columnStatus": "Статус заказа",
+      "columnColor": "Цвет подсветки",
+      "columnActive": "Активно",
+      "emptyText": "Правила еще не созданы. Нажмите «Добавить правило», чтобы выбрать цвет для статуса."
+    },
+    "modal": {
+      "titleAdd": "Новое правило подсветки",
+      "titleEdit": "Редактирование правила",
+      "labelStatus": "Статус заказа",
+      "placeholderStatus": "Выберите статус...",
+      "labelColor": "Цвет строки",
+      "labelActive": "Активировать правило"
+    },
+    "notification": {
+      "loadError": "Не удалось загрузить правила подсветки",
+      "selectStatusError": "Пожалуйста, выберите статус заказа",
+      "saveSuccess": "Правило успешно сохранено",
+      "saveError": "Ошибка при сохранении правила",
+      "deleteSuccess": "Правило удалено",
+      "deleteError": "Ошибка при удалении правила"
+    }
+  }
+}

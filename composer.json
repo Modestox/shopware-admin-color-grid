@@ -1,0 +1,28 @@
+{
+  "name": "modestox/shopware-admin-color-grid",
+  "description": "Custom color highlighting for administration grids",
+  "type": "shopware-platform-plugin",
+  "version": "1.0.0",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sergey Kuzmitsky",
+      "homepage": "https://github.com/Modestox/modestox"
+    }
+  ],
+  "require": {
+    "shopware/core": "~6.7.0"
+  },
+  "extra": {
+    "shopware-plugin-class": "Modestox\\AdminColorGrid\\ModestoxAdminColorGrid",
+    "label": {
+      "en-GB": "Admin Grid Color Customizer",
+      "de-DE": "Admin Grid Farb-Anpassung"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Modestox\\AdminColorGrid\\": "src/"
+    }
+  }
+}

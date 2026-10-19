@@ -1,0 +1,42 @@
+{
+  "sw-settings": {
+    "index": {
+      "tabModestox": "Modestox"
+    }
+  },
+  "modestox-color-grid": {
+    "general": {
+      "title": "Admin Color Grid",
+      "description": "Manage grid row color rules"
+    },
+    "button": {
+      "addRule": "Add Rule",
+      "edit": "Edit",
+      "delete": "Delete",
+      "cancel": "Cancel",
+      "save": "Save"
+    },
+    "list": {
+      "columnStatus": "Order Status",
+      "columnColor": "Highlight Color",
+      "columnActive": "Active",
+      "emptyText": "No rules created yet. Click 'Add Rule' to set colors."
+    },
+    "modal": {
+      "titleAdd": "New Color Rule",
+      "titleEdit": "Edit Color Rule",
+      "labelStatus": "Order Status",
+      "placeholderStatus": "Select status...",
+      "labelColor": "Row Color",
+      "labelActive": "Activate Rule"
+    },
+    "notification": {
+      "loadError": "Failed to load rules",
+      "selectStatusError": "Please select an order status",
+      "saveSuccess": "Rule saved successfully",
+      "saveError": "Error saving rule",
+      "deleteSuccess": "Rule deleted",
+      "deleteError": "Error deleting rule"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "modestox-color-grid": {
+    "list": {
+      "columnStatus": "Status",
+      "columnColor": "Color",
+      "columnActive": "Active"
+    },
+    "notification": {
+      "loadError": "Error loading rules.",
+      "selectStatusError": "Please select a status.",
+      "saveSuccess": "Rule saved successfully.",
+      "saveError": "Error saving rule.",
+      "deleteSuccess": "Rule deleted successfully.",
+      "deleteError": "Error deleting rule."
+    },
+    "validation": {
+      "invalidHexColor": "The color must be a valid hex code (e.g. #FF0000 or #F00).",
+      "duplicateStatus": "A rule for this status already exists!"
+    }
+  }
+}

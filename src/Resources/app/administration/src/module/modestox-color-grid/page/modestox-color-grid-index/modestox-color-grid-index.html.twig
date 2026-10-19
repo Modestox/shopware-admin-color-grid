@@ -1,0 +1,101 @@
+<!--
+/**
+ * Modestox - Shopware Admin Color Grid
+ *
+ * @copyright Copyright (c) 2026 Sergey Kuzmitsky
+ * @license   MIT
+ * @link      https://github.com/Modestox/modestox
+ */
+-->
+<sw-page class="modestox-color-grid-index">
+    <template #smart-bar-header>
+        <h2>{{ $tc('modestox-color-grid.general.title') }}</h2>
+    </template>
+
+    <template #smart-bar-actions>
+        <sw-button variant="primary" @click="onAddNewRule">
+            {{ $tc('modestox-color-grid.button.addRule') }}
+        </sw-button>
+    </template>
+
+    <template #content>
+        <sw-card-view>
+            <sw-card position-identifier="modestox-color-grid-card" :isLoading="isLoading">
+                <sw-data-grid
+                        v-if="rules && rules.length > 0"
+                        :dataSource="rules"
+                        :columns="columns"
+                        :showSelection="false"
+                        :isLoading="isLoading"
+                >
+                    <template #column-color="{ item }">
+                        <div class="modestox-color-preview-wrapper">
+                            <span class="modestox-color-preview-box" :style="{ backgroundColor: item.color }"></span>
+                            <span class="modestox-color-code">{{ item.color }}</span>
+                        </div>
+                    </template>
+
+                    <template #column-active="{ item }">
+                        <sw-switch-field
+                                v-model:value="item.active"
+                                :noMarginTop="true"
+                                @update:value="onInlineActiveChange(item)"
+                        />
+                    </template>
+
+                    <template #actions="{ item }">
+                        <sw-context-menu-item @click="onEditRule(item)">
+                            {{ $tc('modestox-color-grid.button.edit') }}
+                        </sw-context-menu-item>
+                        <sw-context-menu-item variant="danger" @click="onDeleteRule(item)">
+                            {{ $tc('modestox-color-grid.button.delete') }}
+                        </sw-context-menu-item>
+                    </template>
+                </sw-data-grid>
+
+                <sw-empty-state
+                        v-else
+                        title="No Rules Found"
+                        :subline="$tc('modestox-color-grid.list.emptyText')"
+                        icon="regular-content"
+                />
+            </sw-card>
+        </sw-card-view>
+
+        <!-- Rule Edit/Create Modal -->
+        <sw-modal
+                v-if="showModal"
+                :title="currentRule.isNew() ? $tc('modestox-color-grid.modal.titleAdd') : $tc('modestox-color-grid.modal.titleEdit')"
+                @modal-close="onCloseModal"
+        >
+            <sw-entity-single-select
+                    v-model:value="currentRule.stateMachineStateId"
+                    entity="state_machine_state"
+                    :criteria="stateMachineStateCriteria"
+                    labelProperty="name"
+                    :label="$tc('modestox-color-grid.modal.labelStatus')"
+                    :placeholder="$tc('modestox-color-grid.modal.placeholderStatus')"
+                    required
+            />
+
+            <sw-colorpicker
+                    v-model:value="currentRule.color"
+                    :label="$tc('modestox-color-grid.modal.labelColor')"
+            />
+
+            <sw-switch-field
+                    v-model:value="currentRule.active"
+                    :label="$tc('modestox-color-grid.modal.labelActive')"
+            />
+
+            <template #modal-footer>
+                <sw-button size="small" @click="onCloseModal">
+                    {{ $tc('modestox-color-grid.button.cancel') }}
+                </sw-button>
+                <sw-button size="small" variant="primary" @click="onSaveRule">
+                    {{ $tc('modestox-color-grid.button.save') }}
+                </sw-button>
+            </template>
+        </sw-modal>
+    </template>
+</sw-page>
